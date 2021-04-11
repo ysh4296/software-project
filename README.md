@@ -10,6 +10,10 @@
 :small_orange_diamond:  조중현   
 :small_orange_diamond:  허보성   
 
+### Subgroups
+Order_Management: 조중현, 전현욱
+Personal_Shop_Management & Review_Management: 유승훈, 노제원
+User_Management & Ad_Management: 윤찬솔, 허보성
 
 ---
 
