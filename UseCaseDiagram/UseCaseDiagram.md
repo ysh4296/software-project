@@ -1,3 +1,3 @@
 # Order_Management_Diagram
-![UsecaseDiagram](https://user-images.githubusercontent.com/29910793/114294843-348bec80-9adc-11eb-8dd2-8f974f28e12f.png)
+![UseCaseDiagram](https://user-images.githubusercontent.com/29910793/114295716-f85b8a80-9ae1-11eb-8288-9836b2761448.png)
 
