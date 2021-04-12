@@ -13,7 +13,7 @@
 |이용자 및 관리자 |리뷰 지우기 |R-UC2   
 |이용자 및 관리자 |리뷰 확인하기 |R-UC3
 
-# Order_Management Usecase
+# Review_Management Usecase
 
 R-UC1: Add_Review
 
