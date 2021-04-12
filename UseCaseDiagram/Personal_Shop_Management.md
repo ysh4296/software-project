@@ -1,6 +1,6 @@
 # Personal_Shop_Management
 
-
+![2345](https://user-images.githubusercontent.com/33649813/114380761-662cb280-9bc5-11eb-8958-4b9731130b04.png)
 
 서브그룹: 노제원, 유승훈
 
