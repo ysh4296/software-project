@@ -7,60 +7,47 @@
 
 |      Actor  |Actor's goal         |UC                   
 |--------------|--------------------|------------------
-|구매자 |주문하기              |O-UC1, O-UC2, O-UC3             
-|구매자 |필터링을 통해 가게 찾기 |O-UC1, UC2    
-|구매자 |필터링을 통해 메뉴 찾기 |O-UC2
-|구매자,판매자,배달원 |주문 현황 |O-UC6 
-|구매자 |메뉴 장바구니에 추가 |O-UC5, O-UC3     
-|구매자 |장바구니에 있는 메뉴 삭제 |O-UC5, O-UC3  
-|구매자 |장바구니에 있는 메뉴 수량 변경|O-UC5, O-UC3 
-|구매자 |즐겨찾기 이용 |O-UC7
-|구매자 |결제방식 선택하기 |O-UC10 
-|구매자 |추가적인 요청사항 전달 |O-UC11 
-|구매자,판매자,배달원 |배달 현황 확인 |O-UC14  
-|구매자 |주문취소 |O-UC3, O-UC4
-|구매자 |주문후 자신의 총 주문금액을 확인할 수 있다 |O-UC10
+|구매자 |필터링, 정렬, 검색을 통해 원하는 가게 및 메뉴 찾기. |O-UC1             
+|구매자 |검색한 피자집의 정보를 확인 |O-UC1    
+|구매자 |배장 및 메뉴 즐겨찾기 기능 이용 |O-UC5
+|구매자 |메뉴를 장바구니에 추가 |O-UC3, O-UC8
+|구매자 |장바구니에 있는 메뉴 삭제 |O-UC3, O-UC10     
+|구매자 |장바구니에 있는 메뉴 수량 변경 |O-UC3, O-UC9 
+|구매자 |현재 장바구니의 상태 확인|O-UC3 
+|구매자 |주문하기|O-UC2
+|구매자 |결제방식 선택하기 |O-UC2 
+|구매자 |추가적인 요청사항 전달 |O-UC2 
+|구매자,판매자,배달원 |배달 현황 확인 |O-UC4  
+|구매자, 판매자 |주문취소 |O-UC6
+|판매자, 배달원 |배달 현황 업데이트 |O-UC4
 
 # Order_Management Usecase
 
 O-UC1: Search
 
-O-UC2: Filter
+O-UC2: Order
 
-O-UC3: Order
+O-UC3: Manage_Shopping_Bag
 
-O-UC4: Order_Cancel
+O-UC4: Order_Status
 
-O-UC5: Manage_Shopping_Bag
+O-UC5: Delivery_Status
 
-O-UC6: Order_Status
+O-UC6: Cancel_Order
 
 O-UC7: Favorites
 
-O-UC8: Shop_Filter
+O-UC8: Menu_Add
 
-O-UC9: Menu_Filter
+O-UC9: Menu_Quantity_Change
 
-O-UC10: Payment_Method
-
-O-UC11: Additional_Req
-
-O-UC12: Menu_Edit
-
-O-UC13: Menu_Quatity
-
-O-UC14: Show_Delivery_Status
+O-UC10: Menu_Delete
 
 ## Description
 
-Order_Status는 내가 뭘 주문하였는지 확인
+Order_Status는 내가 뭘 주문하였는지 확인 및 Delivery_Status, Cancel_Order include
 
-Payment_Method는 결제방식 및 수령방식을 선택함
+Delivery_Status는 배달현황을 보여는 주는 것
 
-Show_Delivery_Status는 배달현황을 보여는 주는 것
-
-  
-
-방문수령: 주문접수완료 -> 조리중 -> 픽업가능
-
-배달수령: 주문접수완료 -> 조리중 -> 배달 중 -> 배달완료 or 주문취소
+배달현황
+주문요청-> 주문수락 or 주문취소(판매자)-> 배달중(판매자)-> 배달완료(배달원)
