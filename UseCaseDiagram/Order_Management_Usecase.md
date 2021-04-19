@@ -51,3 +51,7 @@ Delivery_Status는 배달현황을 보여는 주는 것
 
 배달현황
 주문요청-> 주문수락 or 주문취소(판매자)-> 배달중(판매자)-> 배달완료(배달원)
+
+## Traceability Matrix
+![스크린샷(33)](https://user-images.githubusercontent.com/29910793/115250899-f8ecc480-a164-11eb-94e1-d4894c21ce1d.png)
+
