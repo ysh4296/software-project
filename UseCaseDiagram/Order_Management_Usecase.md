@@ -1,5 +1,8 @@
 # Order_Management_Diagram
-![UseCaseDiagram](https://user-images.githubusercontent.com/29910793/114296154-889acf00-9ae4-11eb-8198-1341aeda2539.png)
+
+
+![use_case](https://user-images.githubusercontent.com/29854638/115251364-71538580-a165-11eb-9933-4f8005d47ea8.PNG)
+
 
 서브그룹: 조중현, 전현욱
 1. Order_Management의 Use-case를 도출하면서 저번주에 논의한 내용으로는 부족하다고 판단하였음. 
