@@ -14,7 +14,7 @@
 |--------------|--------------------|------------------
 |구매자 |필터링, 정렬, 검색을 통해 원하는 가게 및 메뉴 찾기. |O-UC1             
 |구매자 |검색한 피자집의 정보를 확인 |O-UC1    
-|구매자 |배장 및 메뉴 즐겨찾기 기능 이용 |O-UC5
+|구매자 |배장 및 메뉴 즐겨찾기 기능 이용 |O-UC7
 |구매자 |메뉴를 장바구니에 추가 |O-UC3, O-UC8
 |구매자 |장바구니에 있는 메뉴 삭제 |O-UC3, O-UC10     
 |구매자 |장바구니에 있는 메뉴 수량 변경 |O-UC3, O-UC9 
@@ -22,9 +22,9 @@
 |구매자 |주문하기|O-UC2
 |구매자 |결제방식 선택하기 |O-UC2 
 |구매자 |추가적인 요청사항 전달 |O-UC2 
-|구매자,판매자,배달원 |배달 현황 확인 |O-UC4  
+|구매자 |자신의 주문내용 및 현재 배달상황 확인|O-UC4  
 |구매자, 판매자 |주문취소 |O-UC6
-|판매자, 배달원 |배달 현황 업데이트 |O-UC4
+|판매자, 배달원 |배달 현황 업데이트 |O-UC5
 
 # Order_Management Usecase
 
@@ -34,9 +34,9 @@ O-UC2: Order
 
 O-UC3: Manage_Shopping_Bag
 
-O-UC4: Order_Status
+O-UC4: Order_Info_Check
 
-O-UC5: Delivery_Status
+O-UC5: Delivery_Status_Update
 
 O-UC6: Cancel_Order
 
@@ -50,12 +50,11 @@ O-UC10: Menu_Delete
 
 ## Description
 
-Order_Status는 내가 뭘 주문하였는지 확인 및 Delivery_Status, Cancel_Order include
+Order_Info_Check에서는 구매자가 자신의 주문정보 및 현재 배달상황 열람가능
 
-Delivery_Status는 배달현황을 보여는 주는 것
-
-배달현황
-주문요청-> 주문수락 or 주문취소(판매자)-> 배달중(판매자)-> 배달완료(배달원)
+배달현황의 단계
+주문요청-> 주문수락(판매자) or 주문취소(판매자)-> 배달중(배달원)-> 배달완료(배달원)
+-괄호의 내용은 업데이트 actor
 
 ## Traceability Matrix
 ![스크린샷(35)](https://user-images.githubusercontent.com/29910793/115740607-f2ab5200-a3c9-11eb-8164-3ff086807e07.png)
