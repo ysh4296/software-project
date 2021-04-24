@@ -57,6 +57,7 @@ Order_Info_Check에서는 구매자가 자신의 주문정보 및 현재 배달�
 -괄호의 내용은 업데이트 actor
 
 ## Traceability Matrix
-![스크린샷(35)](https://user-images.githubusercontent.com/29910793/115740607-f2ab5200-a3c9-11eb-8164-3ff086807e07.png)
+![스크린샷(38)](https://user-images.githubusercontent.com/29910793/115947447-aadc1600-a502-11eb-90a0-d75436ea0563.png)
+
 
 
