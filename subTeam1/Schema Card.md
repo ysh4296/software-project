@@ -54,32 +54,9 @@
  </td>
 </table>
 
-| Use case UC-3 | Mannage_Shopping_Bag  |
-|--|--|
-| Related Requirements |Req6, Req7, Req8  |
-| Initiating Actor | 구매자  |
-| Actor's Foal | Shopping bag(장바구니)를 관리한다.  |
-| Participating Actors | Shopping_Bag |
-| Preconditions | 로그인이 되어있어야 함. <br> 한 가지 이상의 메뉴를 선택한 상태여야함  |
-| Post-conditions | 구매자가 원하는 메뉴와 수량이 들어있는 Shopping_Bag(장바구니) |
-<table>
-<td colspan="">  Flow of Events for Main Success Scenario: <br>
-→ 1. 구매자가 한개 이상의 메뉴를 선택하여 장바구니에 들어가 있는 상태<br>
-→ 2. 구매자는 장바구니에 존재하는 메뉴 중에서 자신이 수정하고 싶은 메뉴를 선택<br>
-← 3. 시스템은 구매자에게 메뉴를 어떻게 수정할 것인지 물어봄(수량, 삭제)<br>
-→ 4. 구매자는 수량에 변화를 주거나, 삭제를 선택.<br>
-← 5. 시스템은 결과를 반영하여 구매자에게 보여줌.</td>
-<table>
- <td colspan=""> Flow of Events for Extensions(Alternate Scenario): <br>
-2a. 장바구니에 존재하지 않는 메뉴를 추가하고자 하는 경우.<br>
-→1. 구매자는 추가 버튼을 누른다.<br>
-←2. 시스템은 추가가 가능한 메뉴를 보여준다.<br>
-→3. 구매자는 추가 하고 싶은 메뉴를 선택하여 추가한다.<br>
-←4. 시스템은 이를 반영하여 그 결과를 구매자에게 보여준다.
- </td>
-</table>
 
-| Use case UC-4 | Order_Info_Check  |
+
+| Use case UC-3 | Order_Info_Check  |
 |--|--|
 | Related Requirements |Req9, Req12  |
 | Initiating Actor | 구매자  |
@@ -96,7 +73,7 @@
 ← 5. 시스템은 결과를 반영하여 구매자에게 보여줌.</td>
 <table>
  
- | Use case UC-5 | Delivery_Status_Update  |
+ | Use case UC-4 | Delivery_Status_Update  |
 |--|--|
 | Related Requirements |Req13, Req14  |
 | Initiating Actor | 판매자, 배달원 |
@@ -121,7 +98,7 @@
  </td>
 </table>
 
-| Use case UC-6 | Cancel_Order  |
+| Use case UC-5 | Cancel_Order  |
 |--|--|
 | Related Requirements |  |
 | Initiating Actor | 구매자 |
@@ -137,7 +114,7 @@
 ← 4. 시스템이 주문을 취소하고, 취소 결과를 화면에 띄운다.</td>
 <table>
  
- | Use case UC-7 | Favorites  |
+ | Use case UC-6 | Favorites  |
 |--|--|
 | Related Requirements | Req4 |
 | Initiating Actor | 구매자 |
@@ -160,7 +137,7 @@
  </td>
 </table>
 
- | Use case UC-8 | Menu_Add  |
+ | Use case UC-7 | Menu_Add  |
 |--|--|
 | Related Requirements | Req6, Req8 |
 | Initiating Actor | 구매자 |
@@ -177,7 +154,7 @@
 ← 5. 시스템이 장바구니에 메뉴를 담는다.</td>
 <table>
  
-  | Use case UC-9 | Menu_Quantity_Change  |
+  | Use case UC-8 | Menu_Quantity_Change  |
 |--|--|
 | Related Requirements | Req8 |
 | Initiating Actor | 구매자 |
@@ -196,7 +173,7 @@
  </td>
 </table>
 
- | Use case UC-10 | Menu_Delete  |
+ | Use case UC-9 | Menu_Delete  |
 |--|--|
 | Related Requirements | Req8 |
 | Initiating Actor | 구매자 |
