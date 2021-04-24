@@ -16,7 +16,7 @@
  ← 3. 입력받은 검색어와 연관된 리스트를 구매자에게 보여주다.<br>
  → 4. 구매자는 검색 결과에 따른 리스트를 보고 메뉴를 선택한다.</td>
 <table>
- <td colspan=""> Flow of Events for Main Success Scenario: <br>
+ <td colspan=""> Flow of Events for Extensions(Alternate Scenario): <br>
  2a. 구매자가 검색을 하지 않고 필터링 기능을 사용하여 자신이 원하는 결과를 찾을때<br>
  → 1. 구매자는 필터링 하고 싶은 키워드를 선택한다.<br>
  ← 2. 시스템은 그에 따른 리스트를 구매자에게 보여준다.<br>
@@ -46,7 +46,7 @@
 → 3. 구매자는 결제 완료 버튼을 누른다.<br>
 ← 4. 시스템은 구매자가 작성한 추가 전달사항, 입력한 결제 방식, 주문 내용을 판매자에게 전달한다.</td>
 <table>
- <td colspan=""> Flow of Events for Main Success Scenario: <br>
+ <td colspan=""> Flow of Events for Extensions(Alternate Scenario): <br>
 3a. 인터넷 연결 불량 등의 이유로 정보가 판매자에게 제대로 전달되지 못한 경우.<br>
 ←1. 시스템은 구매자에게 정보를 다시 입력하기를 요구한다.<br>
 → 2. 구매자는 다시 한번 필요한 정보를 입력한다.<br>
@@ -70,7 +70,7 @@
 → 4. 구매자는 수량에 변화를 주거나, 삭제를 선택.<br>
 ← 5. 시스템은 결과를 반영하여 구매자에게 보여줌.</td>
 <table>
- <td colspan=""> Flow of Events for Main Success Scenario: <br>
+ <td colspan=""> Flow of Events for Extensions(Alternate Scenario): <br>
 2a. 장바구니에 존재하지 않는 메뉴를 추가하고자 하는 경우.<br>
 →1. 구매자는 추가 버튼을 누른다.<br>
 ←2. 시스템은 추가가 가능한 메뉴를 보여준다.<br>
