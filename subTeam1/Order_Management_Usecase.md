@@ -14,17 +14,17 @@
 |--------------|--------------------|------------------
 |구매자 |필터링, 정렬, 검색을 통해 원하는 가게 및 메뉴 찾기. |O-UC1             
 |구매자 |검색한 피자집의 정보를 확인 |O-UC1    
-|구매자 |배장 및 메뉴 즐겨찾기 기능 이용 |O-UC7
-|구매자 |메뉴를 장바구니에 추가 |O-UC3, O-UC8
-|구매자 |장바구니에 있는 메뉴 삭제 |O-UC3, O-UC10     
-|구매자 |장바구니에 있는 메뉴 수량 변경 |O-UC3, O-UC9 
-|구매자 |현재 장바구니의 상태 확인|O-UC3 
+|구매자 |배장 및 메뉴 즐겨찾기 기능 이용 |O-UC6
+|구매자 |메뉴를 장바구니에 추가 | O-UC7
+|구매자 |장바구니에 있는 메뉴 삭제 |O-UC9     
+|구매자 |장바구니에 있는 메뉴 수량 변경 | O-UC8 
+|구매자 |현재 장바구니의 상태 확인|O-UC7, O-UC8, O-UC9 
 |구매자 |주문하기|O-UC2
 |구매자 |결제방식 선택하기 |O-UC2 
 |구매자 |추가적인 요청사항 전달 |O-UC2 
-|구매자 |자신의 주문내용 및 현재 배달상황 확인|O-UC4  
-|구매자 |주문취소 |O-UC6
-|판매자, 배달원 |배달 현황 업데이트(판매자의 주문수락/거절 포함) |O-UC5
+|구매자 |자신의 주문내용 및 현재 배달상황 확인|O-UC3 
+|구매자 |주문취소 |O-UC5
+|판매자, 배달원 |배달 현황 업데이트(판매자의 주문수락/거절 포함) |O-UC4
 
 # Order_Management Usecase
 
@@ -32,21 +32,19 @@ O-UC1: Search
 
 O-UC2: Order
 
-O-UC3: Manage_Shopping_Bag
+O-UC3: Order_Info_Check
 
-O-UC4: Order_Info_Check
+O-UC4: Delivery_Status_Update
 
-O-UC5: Delivery_Status_Update
+O-UC5: Cancel_Order
 
-O-UC6: Cancel_Order
+O-UC6: Favorites
 
-O-UC7: Favorites
+O-UC7: Menu_Add
 
-O-UC8: Menu_Add
+O-UC8: Menu_Quantity_Change
 
-O-UC9: Menu_Quantity_Change
-
-O-UC10: Menu_Delete
+O-UC9: Menu_Delete
 
 ## Description
 
