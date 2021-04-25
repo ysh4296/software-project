@@ -1,7 +1,8 @@
 # Order_Management_Diagram
 
 
-![use_case](https://user-images.githubusercontent.com/29854638/115251364-71538580-a165-11eb-9933-4f8005d47ea8.PNG)
+![use_case]![캡처](https://user-images.githubusercontent.com/29854638/115996513-8a9f7a80-a61a-11eb-8cda-dcae3978b0a7.PNG)
+
 
 
 서브그룹: 조중현, 전현욱
