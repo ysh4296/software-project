@@ -1,7 +1,8 @@
 # Order_Management_Diagram
 
 
-![use_case]![캡처](https://user-images.githubusercontent.com/29854638/115996513-8a9f7a80-a61a-11eb-8cda-dcae3978b0a7.PNG)
+![use_case]!![캡처](https://user-images.githubusercontent.com/29854638/115996706-5f695b00-a61b-11eb-9fab-f31302387325.PNG)
+
 
 
 
