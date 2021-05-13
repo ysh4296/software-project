@@ -24,9 +24,10 @@
 ## UC9 sequence diagram
 ### Early version
 <img width="959" alt="UC9_sequence diagram" src="https://user-images.githubusercontent.com/29854638/117999897-46cda480-b380-11eb-9d4e-7b181dd384df.png">
-**UC8 & UC9 sequence diagram 초기설계 issue**
+
+- UC8 & UC9 sequence diagram 초기설계 issue </br>
 기존 domain model은 사용자가 장바구니 페이지로 이동한 상태라고 가정하고 설계했다. sequence diagram을 그리면서 장바구니 페이지로 접속하는 과정이 생략되었음을 알았고, '장바구니 버튼' component를 추가하였다. 
----
+
 ### Version #2
 ![UC9](https://user-images.githubusercontent.com/29854638/118155629-61bd1900-b453-11eb-8ae6-635c91e44304.JPG)
 
