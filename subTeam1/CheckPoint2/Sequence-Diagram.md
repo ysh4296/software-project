@@ -8,7 +8,7 @@
 ![KakaoTalk_20210513_001716196](https://user-images.githubusercontent.com/29910793/118000710-06225b00-b381-11eb-82ac-1fc7d91646ab.jpg)
 ---
 - __Version #1__에서 #2로의 변화
- 초기 설계 당시 Usecase-1:Search의 범위를 검색까지 생각했었지만, 도메인 모델에서 범위를 가게 선택까지 포함하게 바꾸었다. 이를 위해 version #2에서 추가적인 변수와 flow에 변화를 주었다. 
+-- 초기 설계 당시 Usecase-1:Search의 범위를 검색까지 생각했었지만, 도메인 모델에서 범위를 가게 선택까지 포함하게 바꾸었다. 이를 위해 version #2에서 추가적인 변수와 flow에 변화를 주었다. 
 -- 위와 같은 변화를 줌으로써 첫번째 Search flow 과정에서 loop를 추가해야 할 필요성을 느끼게 되어 이를 추가하게 되었다.
 -- 추가적인 variation을 고민해 보았지만, class가 불필요하게 많아지거나, flow의 흐름이 길어지게 되는 경우가 발생하여 이 version으로 결정하게 되었다.
 ### Final version
