@@ -7,10 +7,10 @@
 ### Version #2
 ![KakaoTalk_20210513_001716196](https://user-images.githubusercontent.com/29910793/118000710-06225b00-b381-11eb-82ac-1fc7d91646ab.jpg)
 ---
-- __Version #1__에서 #2로의 변화
---초기 설계 당시 Usecase-1:Search의 범위를 검색까지 생각했었지만, 도메인 모델에서 범위를 가게 선택까지 포함하게 바꾸었다.
---이를 위해 version #2에서 추가적인 변수와 flow에 변화를 주었다.  위와 같은 변화를 줌으로써 첫번째 Search flow 과정에서 loop를 추가해야 할 필요성을 느끼게 되어 이를 추가하게 되었다.
---추가적인 variation을 고민해 보았지만, class가 불필요하게 많아지거나, flow의 흐름이 길어지게 되는 경우가 발생하여 이 version으로 결정하게 되었다.
+### __Version #1__에서 #2로의 변화
+- 초기 설계 당시 Usecase-1:Search의 범위를 검색까지 생각했었지만, 도메인 모델에서 범위를 가게 선택까지 포함하게 바꾸었다.
+- 이를 위해 version #2에서 추가적인 변수와 flow에 변화를 주었다.  위와 같은 변화를 줌으로써 첫번째 Search flow 과정에서 loop를 추가해야 할 필요성을 느끼게 되어 이를 추가하게 되었다.
+- 추가적인 variation을 고민해 보았지만, class가 불필요하게 많아지거나, flow의 흐름이 길어지게 되는 경우가 발생하여 이 version으로 결정하게 되었다.
 ### Final version
 
 ## UC7 sequence diagram
@@ -20,14 +20,13 @@
 ### Version #2
 ![usecase7Menuadd](https://user-images.githubusercontent.com/29910793/118136635-49db9a00-b43f-11eb-86bc-4c4928a20809.jpg)
 ---
-- __Version #1__에서 #2로의 변화
---Usecase-7:MenuAdd의 범위도 초기 설계와 다르게 바꾸었다. Usecase-7은 Usecase-1 다음으로 바로 이어지게 설계가 되었기 때문에 생긴 결과이다.
---앞부분의 store_select 부분을 삭제하여, 이에따라 시작하는 page가 Search page가 아닌 Menu page이다.
---Flow가 바뀜에 따라 필요가 없어진 pagemaker와 Searcher class를 삭제했다.
+### __Version #1__에서 #2로의 변화
+- Usecase-7:MenuAdd의 범위도 초기 설계와 다르게 바꾸었다. Usecase-7은 Usecase-1 다음으로 바로 이어지게 설계가 되었기 때문에 생긴 결과이다.
+- 앞부분의 store_select 부분을 삭제하여, 이에따라 시작하는 page가 Search page가 아닌 Menu page이다.
+- Flow가 바뀜에 따라 필요가 없어진 pagemaker와 Searcher class를 삭제했다.
 ### Version #2-var
---기존에는 컨트롤러에서 직접 database에 정보를 push하는 방식을 생각해냈지만, 컨트롤러의 부하를 최소한으로 줄이기 위해 bagmaker를 추가로 도입하였다.
 ![menuaddVar](https://user-images.githubusercontent.com/29910793/118141783-b73df980-b444-11eb-9f7e-1408b9d533ce.jpg)
-
+- 기존에는 컨트롤러에서 직접 database에 정보를 push하는 방식을 생각해냈지만, 컨트롤러의 부하를 최소한으로 줄이기 위해 bagmaker를 추가로 도입하였다.
 ### Final version
 
 ## UC8 sequence diagram
