@@ -12,6 +12,7 @@
 - 이를 위해 version #2에서 추가적인 변수와 flow에 변화를 주었다.  위와 같은 변화를 줌으로써 첫번째 Search flow 과정에서 loop를 추가해야 할 필요성을 느끼게 되어 이를 추가하게 되었다.
 - 추가적인 variation을 고민해 보았지만, class가 불필요하게 많아지거나, flow의 흐름이 길어지게 되는 경우가 발생하여 이 version으로 결정하게 되었다.
 ### Final version
+![스크린샷(48)](https://user-images.githubusercontent.com/29910793/118347323-58c86680-b57d-11eb-9682-50ee9162a7f8.png)
 
 ## UC7 sequence diagram
 ### Version #1
@@ -28,6 +29,7 @@
 ![menuaddVar](https://user-images.githubusercontent.com/29910793/118141783-b73df980-b444-11eb-9f7e-1408b9d533ce.jpg)
 - 기존에는 컨트롤러에서 직접 database에 정보를 push하는 방식을 생각해냈지만, 컨트롤러의 부하를 최소한으로 줄이기 위해 bagmaker를 추가로 도입하였다.
 ### Final version
+![스크린샷(49)](https://user-images.githubusercontent.com/29910793/118347325-5c5bed80-b57d-11eb-86de-7ec20c2a78ec.png)
 
 ## UC8 sequence diagram
 ### Early version
