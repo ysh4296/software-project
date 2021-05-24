@@ -15,5 +15,5 @@ class User(AbstractUser):
         (USER_ADMIN, "Admin"),
     )
 
-    user_type = models.CharField(choices=USER_TYPE_CHOICES, max_length=10)
+    user_type = models.CharField(choices=USER_TYPE_CHOICES, max_length=10, blank=True)
     address = models.CharField(max_length=80, blank=True)
