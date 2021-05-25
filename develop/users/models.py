@@ -9,6 +9,11 @@ class User(AbstractUser):
     USER_CUSTOMER = "customer"
     USER_SELLER = "seller"
     USER_ADMIN = "admin"
+    USER_TYPES = (
+        (USER_CUSTOMER, "Customer"),
+        (USER_SELLER, "Seller"),
+    )
+    # for define model
     USER_TYPE_CHOICES = (
         (USER_CUSTOMER, "Customer"),
         (USER_SELLER, "Seller"),

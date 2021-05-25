@@ -6,4 +6,13 @@ from . import models
 # Register your models here.
 @admin.register(models.User)
 class CustomUserAdmin(UserAdmin):
-    pass
+    fieldsets = UserAdmin.fieldsets + (
+        (
+            "Custom Profile", {
+            'fields': (
+                'user_type',
+                'address'
+                )
+            },
+        ),
+    )
