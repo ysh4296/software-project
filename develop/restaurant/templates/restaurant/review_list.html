@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<div class="btn-group">
+    <a href="#" class="btn btn-info">Add Review</a>
+</div>
+<p></p>
+<table class="table">
+    <thread>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Shop id</th>
+            <th scope="col">User id</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Modify</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for review in object_list %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td><a href="#">{{review.shop_id}}</a></td>
+                <td><a href="#">{{review.user_id}}</a></td>
+                <td><a href="">{{review.summary}}</a></td>
+                <td><a href="#" class="btn btn-success btn-sm">Modify</a></td>
+                <td><a href="#" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
