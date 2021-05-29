@@ -41,15 +41,12 @@ def review_delete(request, restaurant_id, review_id):
 
 class detail_model(ListView):
     def checklog(self, item, username):
-        nval = Review.objects.filter(reviewer=username).all()  # 식당에 해당하는 리뷰을 조회
-        if nval != None:
-            print(1)
+        nval = Review.objects.filter(reviewer=username).all() & Review.objects.filter(restaurant=item).all() # 식당에 해당하는 리뷰을 조회
+        if nval.exists():
             return False
-        rval = Orderlog.object.filter(reviewer=username).all() & Orderlog.object.filter(restaurant=item).all()
-        if rval == None:
-            print(2)
+        rval = Orderlog.objects.filter(reviewer=username).all() & Orderlog.objects.filter(restaurant=item).all()
+        if rval.exists() == False:
             return False
-        print(3)
         return True
 
     def get(self, request, id):
