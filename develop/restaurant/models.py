@@ -22,14 +22,19 @@ class Review(models.Model):
     point = models.IntegerField()
     comment = models.CharField(max_length=500)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    reviewer = models.CharField(max_length=150, default = "NONE")
     # 필드의 종류가 결정하는 것
     # 1. 데이터베이스의 컬럼 종류
     # 2. 제약 사항 (몇글자까지)
     # 3. Form의 종류
     # 4. Form에서 제약 사항
-
+    # 5. 작성자
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
     # 모델을 만들었다 => 데이터베이스에 어떤 데이터들을 어떤 형태로 넣을지 결정.
     # 마이그레이션(migrate) => 데이터베이스에 모델의 내용을 반영(테이블 생성)
     # 모델을 수정하면, 또다시 migrate해야함
+
+class Orderlog(models.Model):
+    reviewer = models.CharField(max_length=150, default = "NONE")
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)

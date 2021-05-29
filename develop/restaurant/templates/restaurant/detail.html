@@ -19,7 +19,7 @@
             </p>
             {% for review in reviews %}
                 <div class="card bg-light mb-3">
-                    <div class="card-header"><b>{{ review.point }}</b>점
+                    <div class="card-header"><b>{{ review.reviewer }} : {{ review.point }}</b>점
                         <a href="{% url 'review-delete' restaurant_id=item.id review_id=review.id %}">
                             <button type="button" class="close" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
