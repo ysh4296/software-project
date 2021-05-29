@@ -10,7 +10,7 @@ urlpatterns = [
     path('list/', views.list, name="list"),
     path('detail/', views.detail_model.as_view(), name="restaurant-detail"),
 
-    path('restaurant/<int:id>/', views.detail, name="restaurant-detail"),
+    path('restaurant/<int:id>/', views.detail_model.as_view(), name="restaurant-detail"),
     path('restaurant/<int:restaurant_id>/review/create/', views.Review_model.as_view(), name='review-create'),
     path('restaurant/<int:restaurant_id>/review/delete/<int:review_id>', views.review_delete, name='review-delete'),
 

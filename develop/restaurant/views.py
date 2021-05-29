@@ -37,41 +37,13 @@ def create(request):
     return render(request, 'restaurant/create.html', {'form': form})
 
 
-def detail(request, id):  # 식당 조회 페이지
-    if 'id' is not None:
-        item = get_object_or_404(Restaurant, pk=id)
-        reviews = Review.objects.filter(restaurant=item).all()  # 식당에 해당하는 리뷰을 조회
-        return render(request, 'restaurant/detail.html', {'item': item, 'reviews': reviews})
-    return HttpResponseRedirect('/restaurant/list/')
-
-
 def review_delete(request, restaurant_id, review_id):
     item = get_object_or_404(Review, pk=review_id)
     item.delete()
     return redirect('restaurant-detail', id=restaurant_id)
 
 class detail_model(ListView):
-    print("hello")
-
-    def get(self, request, id):
-        print("asdfa")
-        if 'id' is not None:
-            item = get_object_or_404(Restaurant, pk=id)
-            reviews = Review.objects.filter(restaurant=item).all()  # 식당에 해당하는 리뷰을 조회
-            return render(request, 'restaurant/detail.html', {'item': item, 'reviews': reviews})
-        return HttpResponseRedirect('/restaurant/list/')
-
-    def post(self, request, restaurant_id):
-        print("POST")
-        form = ReviewForm(request.POST)
-        item = get_object_or_404(Restaurant, pk=restaurant_id)
-        form = ReviewForm(initial={'restaurant': item, 'reviewer': request.user})
-        return render(request, 'restaurant/review_create.html', {'form': form, 'item': item})
-
-
-class Review_model(ListView):
     def checklog(self, item, username):
-        print(username)
         nval = Review.objects.filter(reviewer=username).all()  # 식당에 해당하는 리뷰을 조회
         if nval != None:
             return "이미 리뷰가 있습니다."
@@ -80,8 +52,15 @@ class Review_model(ListView):
             return "주문기록이 없는 이용자는 작성할 수 없습니다."
         return None
 
+    def get(self, request, id):
+        if 'id' is not None:
+            item = get_object_or_404(Restaurant, pk=id)
+            reviews = Review.objects.filter(restaurant=item).all()  # 식당에 해당하는 리뷰을 조회
+            return render(request, 'restaurant/detail.html', {'item': item, 'reviews': reviews})
+        return HttpResponseRedirect('/restaurant/list/')
+
+class Review_model(ListView):
     def get(self, request, restaurant_id):
-        print("GET")
         form = ReviewForm(request.POST)
         item = get_object_or_404(Restaurant, pk=restaurant_id)
         form = ReviewForm(initial={'restaurant': item, 'reviewer': request.user})
