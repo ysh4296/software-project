@@ -1,7 +1,7 @@
-"""Aconfig URL Configuration
+"""config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,10 +14,30 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.urls.conf import include
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+from shop import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls', namespace='users'))
+    path('', views.index, name='index'),
+    path('shop/', include('shop.urls')),
+    path('cart/', include('cart.urls')),
+    path('order/', include('order.urls')),
+    path('accounts/create/', views.signup_view, name='signup'),
+    path('accounts/login/', views.signin_view, name='signin'),
+    path('accounts/logout/', views.signout_view, name='signout'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        prefix=settings.STATIC_URL,
+        document_root=settings.STATIC_ROOT,
+    )
+    urlpatterns += static(
+        prefix=settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
+    )
