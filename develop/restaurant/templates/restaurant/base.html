@@ -30,12 +30,15 @@
             <a class="nav-link" href="/restaurant/list">리스트</a>
           </li>
         {% if user.user_type == 'seller' %}
+            {% if rest %}
           <li class="nav-item">
-            <a class="nav-link" href="/restaurant/create">등록</a>
+            <a class="nav-link" href="{% url 'restaurant-menu-add' rest_id %}">메뉴_등록</a><!--restaurant id 정리-->
           </li>
+            {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'restaurant-menu-add' restaurant_id=1 %}">메뉴_등록</a><!--restaurant id 정리-->
+            <a class="nav-link" href="/restaurant/create">가게_등록</a>
           </li>
+            {% endif %}
         {% endif %}
         </ul>
       </div>
