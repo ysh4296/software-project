@@ -5,6 +5,5 @@
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
         "--max-line-length--88"
-    ],
-    "python.pythonPath": "/Users/heoboseong/.local/share/virtualenvs/develop-XU0_Gu3N/bin/python"
+    ]
 }
