@@ -13,6 +13,12 @@ class SignUpForm(forms.ModelForm):
 
     user_type = forms.ChoiceField(choices=models.User.USER_TYPES)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs["class"] = "form-control"
+        self.fields["user_type"].widget.attrs["class"] = "form-select w-100"
+
     def save(self, *args, **kwargs):
         user = super().save(commit=False)
         password = self.cleaned_data.get("password")

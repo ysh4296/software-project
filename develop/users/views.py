@@ -59,12 +59,22 @@ class EditView(SuccessMessageMixin, UpdateView):
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class=form_class)
-        form.fields["password"].widget.attrs = {"placeholder": "Password"}
-        # form.fields["password"].initial = "New password"
-        # print(form.fields["password"].initial)
-        form.fields["first_name"].widget.attrs = {"placeholder": "First Name"}
-        form.fields["last_name"].widget.attrs = {"placeholder": "Last Name"}
-        form.fields["address"].widget.attrs = {"placeholder": "Address"}
+        form.fields["password"].widget.attrs = {
+            "placeholder": "Password",
+            "class": "form-control",
+        }
+        form.fields["first_name"].widget.attrs = {
+            "placeholder": "First Name",
+            "class": "form-control",
+        }
+        form.fields["last_name"].widget.attrs = {
+            "placeholder": "Last Name",
+            "class": "form-control",
+        }
+        form.fields["address"].widget.attrs = {
+            "placeholder": "Address",
+            "class": "form-control",
+        }
         return form
 
     def form_valid(self, form):
