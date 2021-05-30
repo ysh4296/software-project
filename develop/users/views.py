@@ -61,3 +61,8 @@ class EditView(SuccessMessageMixin, UpdateView):
         form.fields["last_name"].widget.attrs = {"placeholder": "Last Name"}
         form.fields["address"].widget.attrs = {"placeholder": "Address"}
         return form
+
+    def form_valid(self, form):
+        new_password = form.cleaned_data.get("password")
+        self.request.user.set_password(new_password)
+        return super().form_valid(form)
