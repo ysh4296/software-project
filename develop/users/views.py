@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect, render, reverse
 from django.views.generic import FormView, CreateView, UpdateView
 from django.contrib.auth import authenticate, login, logout
@@ -9,13 +8,14 @@ from . import forms, models
 
 # Create your views here.
 class SignUpView(FormView):
-    template_name = 'users/signup.html'
+    template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("users:login")
 
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
 
 class LoginView(FormView):
 
@@ -31,8 +31,10 @@ class LoginView(FormView):
             login(self.request, user)
         return super().form_valid(form)
 
+
 def home(request):
-    return render(request, 'users/home.html')
+    return render(request, "users/home.html")
+
 
 class EditView(SuccessMessageMixin, UpdateView):
     model = models.User
@@ -43,6 +45,7 @@ class EditView(SuccessMessageMixin, UpdateView):
         "last_name",
         "address",
     )
+    initial = {"password": "New password"}
     success_message = "Profile Updated"
     success_url = reverse_lazy("users:home")
 
@@ -52,6 +55,8 @@ class EditView(SuccessMessageMixin, UpdateView):
     def get_form(self, form_class=None):
         form = super().get_form(form_class=form_class)
         form.fields["password"].widget.attrs = {"placeholder": "Password"}
+        # form.fields["password"].initial = "New password"
+        # print(form.fields["password"].initial)
         form.fields["first_name"].widget.attrs = {"placeholder": "First Name"}
         form.fields["last_name"].widget.attrs = {"placeholder": "Last Name"}
         form.fields["address"].widget.attrs = {"placeholder": "Address"}
