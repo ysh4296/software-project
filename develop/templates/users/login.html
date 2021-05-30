@@ -1,22 +1,21 @@
-{% block content %}
+{% extends "base.html" %}
 
-<div class="container">
+{% block page_title %}로그인{% endblock page_title %}
+
+{% block content %}
     <h1>로그인</h1>
     
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        Username:
-        <br>
-        <input name="username"type="text"id="username">
-        <br>
-        Password:
-        <br>
-        <input name="password"type="password"id="password">
-        <br><br>
-        <button type="submit"class="btn btn-primary">로그인</button>
-        <br><br> 
-        <a href="{% url 'users:signup' %}">회원가입</a>
+        {% for field in form %}
+            <div style='padding: 1em'>
+                {{field.label}}
+                {{field}}
+            </div>
+        {% endfor %}
+        <button>로그인</button>
     </form>
-</div>
+    <br>
+    <a href="{% url 'users:signup' %}">회원가입</a>
 
 {% endblock %}

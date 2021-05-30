@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <form method="POST" enctype="multipart/form-data">
-  {% csrf_token %} 
-  {% for field in form %} 
-    <div style='padding: 1em'>
-      {{field.label}} 
-      {{field}} 
-    </div>
-  {% endfor %}
+{% extends "base.html" %}
 
-  <button>회원가입</button>
-</form>
-</body>
-</html>
+{% block pate_title %}회원가입{% endblock pate_title %}
 
-
+{% block content %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {% for field in form %} 
+            <div style='padding: 1em'>
+            {{field.label}} 
+            {{field}} 
+            </div>
+        {% endfor %}
+    <button>회원가입</button>
+{% endblock content %}
