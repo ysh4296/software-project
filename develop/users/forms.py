@@ -24,10 +24,14 @@ class SignUpForm(forms.ModelForm):
 class LoginForm(forms.Form):
 
     username = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "username"})
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "username"}
+        )
     )
     password = forms.CharField(
-        widget=forms.PasswordInput(attrs={"placeholder": "Password"})
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Password"}
+        )
     )
 
     def clean(self):

@@ -3,19 +3,24 @@
 {% block page_title %}로그인{% endblock page_title %}
 
 {% block content %}
-    <h1>로그인</h1>
     
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        <div class="container">
+        <h1 class="text-center">로그인</h1>
         {% for field in form %}
-            <div style='padding: 1em'>
+            <div class="w-25 mx-auto" style='padding: 1em'>
                 {{field.label}}
                 {{field}}
             </div>
         {% endfor %}
-        <button class="btn-primary btn-lg">로그인</button>
+        <div class="mx-auto w-25 text-center">
+            <button class="w-75 btn-primary btn-lg text-center mb-2">로그인</button>
+            <br>
+            <button type="button" class="w-75 btn-primary btn-lg" onclick="location.href='{% url 'users:signup' %}'">회원가입</button>
+        </div>
+        </div>
     </form>
     <br>
-    <a href="{% url 'users:signup' %}">회원가입</a>
 
 {% endblock %}
