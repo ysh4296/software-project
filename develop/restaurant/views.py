@@ -63,9 +63,12 @@ class list_model(ListView):
 ##05월30일  1105 추가
 class Shop_model(ListView):
     ########## 식당이름 중복인지 조회
-    def checkshop(self, shopname):
-        nval = Restaurant.objects.filter(name=shopname['name']).all() #식당 이름이 중복인지 조회
+    def checkshop(self, request):
+        nval = Restaurant.objects.filter(name=request.POST['name']).all() #식당 이름이 중복인지 조회
         if nval.exists():
+            return False
+        rval = Restaurant.objects.filter(user=request.user).all()
+        if rval.exists():
             return False
         return True
 
@@ -77,8 +80,8 @@ class Shop_model(ListView):
     ######## shop이 중복이면 변화 없음, shop이 중복이 아니면 요청이 넘어가는데 현재 ACCEPTED 상태가 아니라서 안보임
     def post(self, request):
         form = RestaurantForm(request.POST)
-        nval = self.checkshop(request.POST)
-        print(form.is_valid())
+        nval = self.checkshop(request)
+        print(nval)
         if nval == True and form.is_valid():
             new_item = form.save(commit=False)
             new_item.user = request.user
