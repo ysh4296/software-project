@@ -91,7 +91,6 @@ class Menu_add(ListView):
 
     def post(self, request, restaurant_id):
         user = request.user
-        print(USER_SELLER)
         form = MenuaddForm(request.POST)
         item = get_object_or_404(Restaurant, pk=restaurant_id)
         if form.is_valid():
