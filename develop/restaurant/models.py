@@ -8,14 +8,13 @@ from django.db import models
 # 인스턴스 = 테이블의 레코드
 # 필드의 값(인스턴스의 필드값) = 레코드의 컬럼 데이터값
 # /models.py
-
-
+from users.models import User
 
 class Restaurant(models.Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=200)
-    accepted = models.BooleanField()
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    accepted = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 

@@ -41,7 +41,7 @@ class ReviewForm(forms.ModelForm):
         }
         widgets = {
             'restaurant': forms.HiddenInput(),  # 리뷰를 달 식당 정보는 사용자에게 보여지지 않도록 한다
-            'reviewer' : forms.HiddenInput(), #리뷰어의 이름을 입력할 필요는 없다.
+            'reviewer': forms.HiddenInput(), #리뷰어의 이름을 입력할 필요는 없다.
             'point': forms.Select(choices=REVIEW_POINT_CHOICES)  # 선택지를 인자로 전달
         }
         help_texts = {

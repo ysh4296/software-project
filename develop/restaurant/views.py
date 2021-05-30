@@ -35,8 +35,7 @@ class list_model(ListView):
         paginator = Paginator(restaurants, 5)  # 한 페이지에 5개씩 표시
         items = paginator.get_page(page)  # 해당 페이지에 맞는 리스트로 필터링
         context = {
-            "restaurants": items,
-            'base_val': nval
+            "restaurants": items
         }
         return render(request, 'restaurant/list.html', context)
 
@@ -64,7 +63,7 @@ class list_model(ListView):
 ##05월30일  1105 추가
 class Shop_model(ListView):
     ########## 식당이름 중복인지 조회
-    def checkshop(self,shopname):
+    def checkshop(self, shopname):
         nval = Restaurant.objects.filter(name=shopname['name']).all() #식당 이름이 중복인지 조회
         if nval.exists():
             return False
@@ -79,8 +78,11 @@ class Shop_model(ListView):
     def post(self, request):
         form = RestaurantForm(request.POST)
         nval = self.checkshop(request.POST)
+        print(form.is_valid())
         if nval == True and form.is_valid():
-            new_item = form.save()
+            new_item = form.save(commit=False)
+            new_item.user = request.user
+            new_item.save()
         return HttpResponseRedirect('/restaurant/list/')
 
 
@@ -121,6 +123,7 @@ class Review_model(ListView):
 
     def post(self, request, restaurant_id):
         form = ReviewForm(request.POST)
+        print(request.POST)
         if form.is_valid():
             new_item = form.save()
         return redirect('restaurant-detail', id=restaurant_id)
