@@ -22,4 +22,3 @@ class User(AbstractUser):
 
     user_type = models.CharField(choices=USER_TYPE_CHOICES, max_length=10, blank=True)
     address = models.CharField(max_length=80, blank=True)
-    restaurant_id = models.IntegerField(default=-1)# set default restaurant as none
