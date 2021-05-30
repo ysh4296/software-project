@@ -10,20 +10,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
-      <a href="/restaurant/list">음식점</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/restaurant/list">리스트</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/restaurant/create">등록</a>
-          </li>
-        </ul>
-      </div>
+      <a href="/restaurant/list">
+          <button class="btn btn-info">음식점</button>
+      </a>
+      <a href="/restaurant/list">
+          <button class="btn btn-info">리스트</button>
+      </a>
+      {% if base_val == True %}
+      <a href="/restaurant/create">
+          <button class="btn btn-info">등록</button>
+      </a>
+      {% endif %}
     {% block content %}
     {% endblock %}
 </body>

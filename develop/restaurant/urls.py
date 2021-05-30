@@ -6,8 +6,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
 
-    path('create/', views.create, name="restaurant_create"),
-    path('list/', views.list, name="list"),
+    path('create/', views.Shop_model.as_view(), name="restaurant_create"),
+    path('list/', views.list_model.as_view(), name="list"),
     path('detail/', views.detail_model.as_view(), name="restaurant-detail"),
 
     path('restaurant/<int:id>/', views.detail_model.as_view(), name="restaurant-detail"),

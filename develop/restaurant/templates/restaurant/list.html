@@ -3,6 +3,7 @@
 {% block content %}
 <div class="container">
     {% for item in restaurants %}
+    {% if item.accepted %}
     <div class="row restaurant-item" style="margin:20px auto;">
         <div class="col-sm-12">
             <div class="card border-secondary">
@@ -16,6 +17,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 <div class="row">
