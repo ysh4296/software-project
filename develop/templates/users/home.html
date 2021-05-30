@@ -1,4 +1,16 @@
-<h1>Hello World</h1>
+{% extends "base.html" %}
+{% block page_title %}Home{% endblock page_title %}
 
-<a href="{% url 'users:edit' %}">회원정보수정</a>
-<a href="{% url 'users:logout' %}">로그아웃</a>
+{% block content %}
+
+    <h1>Pizza ordering System</h1>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'users:edit' %}">회원정보수정</a>
+        <a href="{% url 'users:logout' %}">로그아웃</a>
+    {% else %}
+        <a href="{% url 'users:login' %}">로그인</a>
+        <a href="{% url 'users:signup' %}">회원가입</a>
+    {% endif %}
+
+{% endblock content %}
