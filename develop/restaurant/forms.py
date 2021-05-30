@@ -1,5 +1,5 @@
 from django import forms
-from . models import Restaurant, Review
+from . models import Restaurant, Review, Menu
 
 
 from django.utils.translation import gettext_lazy as _
@@ -47,4 +47,24 @@ class ReviewForm(forms.ModelForm):
         help_texts = {
             'point': _('평점을 입력해주세요.'),
             'comment': _('코멘트를 입력해주세요.'),
+        }
+
+class MenuaddForm(forms.ModelForm):
+    class Meta:
+        model = Menu
+        fields = ['name', 'price', 'component', 'ingredient','restaurant']
+        labels = {
+            'name': _('메뉴 이름'),
+            'component': _('메뉴 구성'),
+            'ingredient': _('재료'),
+            'price': _('가격'),
+        }
+        widgets = {
+            'restaurant': forms.HiddenInput(),  # 리뷰를 달 식당 정보는 사용자에게 보여지지 않도록 한다
+        }
+        help_texts = {
+            'name': _('메뉴 이름을 입력해주세요.'),
+            'component': _('메뉴 구성을 입력해주세요.'),
+            'ingredient': _('재료를 입력해주세요.'),
+            'price': _('가격을 입력해주세요.'),
         }
