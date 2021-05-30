@@ -17,6 +17,11 @@ class SignUpView(FormView):
         return super().form_valid(form)
 
 
+def log_out(request):
+    logout(request)
+    return redirect(reverse("users:login"))
+
+
 class LoginView(FormView):
 
     template_name = "users/login.html"
