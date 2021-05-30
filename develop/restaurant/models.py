@@ -38,3 +38,10 @@ class Review(models.Model):
 class Orderlog(models.Model):
     reviewer = models.CharField(max_length=150, default = "NONE")
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+
+class Menu(models.Model):
+    name = models.CharField(max_length=150)
+    price = models.CharField(max_length=500)
+    component = models.CharField(max_length=500)
+    ingredient = models.CharField(max_length=500)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE) # sellor 는 restaurant로 교체
