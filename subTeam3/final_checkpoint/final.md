@@ -50,9 +50,10 @@
 :small_blue_diamond:  detail
  ![request_regist_shop](https://user-images.githubusercontent.com/29995264/120181519-23439e80-c248-11eb-9882-d492dc437a69.gif)
  1. 판매자 가게 이름과, 주소를 입력하고 등록 버튼을 누르면 가게 등록 요청이 관리자에게 전달된다.
- 2. 승인되지 않은 가게는 보이지 않는다.
- 3. 판매자의 가게가 존재하지 않는 경우에만 가게등록 버튼이 보인다.
  ![accept_shop](https://user-images.githubusercontent.com/29995264/120181794-859c9f00-c248-11eb-949a-a136f0080900.gif)
+ 2. 관리자는 관리자 페이지에서 가게를 승인할 수 있다.
+ 3. 승인되지 않은 가게는 보이지 않는다.
+ 4. 판매자의 가게가 존재하지 않는 경우에만 가게등록 버튼이 보인다.
 
 
 
