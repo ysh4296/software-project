@@ -127,10 +127,10 @@ class detail_model(ListView):
         if 'id' is not None:
             item = get_object_or_404(Restaurant, pk=id)
             rest = Restaurant.objects.filter(user=request.user).exists()
+            menus = Menu.objects.filter(restaurant=item).all()
             if rest == True:
                 tmp = Restaurant.objects.filter(user=request.user).all()
                 rest_id = tmp[0].pk
-                menus = Menu.objects.filter(restaurant=item).all()
             else:
                 rest_id = -1
             item = get_object_or_404(Restaurant, pk=id)
@@ -142,7 +142,7 @@ class detail_model(ListView):
                 'val': val,
                 "rest": rest,
                 "rest_id": rest_id,
-            'menus': menus
+                'menus': menus
             }
             return render(request, 'restaurant/detail.html', context)
         return HttpResponseRedirect('/restaurant/list/')

@@ -6,18 +6,14 @@
         <div class="col-sm-12" style="margin-top:20px;">
             <h3>{{ item.name }}</h3>
             <p>{{ item.address }}</p>
-            <p>
-                <a href="#">
-                    <button class="btn btn-danger">삭제하기</button>
-                </a>
-            </p>
             {% if val == True %}
+            {% if user.user_type == 'customer' %}
             <p>
-                
                 <a href="{% url 'restaurant:review-create' restaurant_id=item.id %}">
                     <button class="btn btn-info">리뷰쓰기</button>
                 </a>
             </p>
+            {% endif %}
             {% endif %}
             <hr>
             {% for menu in menus %}
