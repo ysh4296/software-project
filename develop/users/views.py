@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render, reverse
-from django.views.generic import FormView, CreateView, UpdateView
+from django.views.generic import FormView, UpdateView
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserChangeForm
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from . import forms, models
