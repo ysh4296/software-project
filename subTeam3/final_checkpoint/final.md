@@ -1,14 +1,14 @@
 # Final _ check point
 
 ## 1. 목차
-1. small_blue_diamond:  구현 범위  
+1. 구현 범위
    1. Menu Add
    2. Review Add
    3. Shop Add  
 
-2. small_blue_diamond:  결론  
+2. 결론  
 
-3. small_blue_diamond:  느낀점    
+3. 느낀점    
 
 
 ## 2. 구현범위
