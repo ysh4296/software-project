@@ -39,6 +39,7 @@
  - 가게가 승인되면 리스트에 가게가 보이게 된다.
 
 #### :small_blue_diamond:  detail  
+![review_add](https://user-images.githubusercontent.com/29995264/120184080-83880f80-c24b-11eb-8691-9aa3ec772d56.gif)
  1. 구매한 기록이 없는 구매자의 경우 리뷰 추가 버튼이 보이지 않는다.
  2. 한 사람 당 한개의 리뷰만 작성이 가능하다.
 
