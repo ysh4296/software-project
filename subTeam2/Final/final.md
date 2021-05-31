@@ -1,6 +1,7 @@
 ## Use Case 구현
 ### UC1 Login
 - username, password를 입력받아 로그인을 할 수 있다.
+
 ![login](https://user-images.githubusercontent.com/29909322/120178621-a9f67c80-c244-11eb-8916-14f47234467c.gif)
 
 ### UC2 Add_User
