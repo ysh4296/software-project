@@ -48,6 +48,7 @@
  - 시스템은 추가된 리뷰를 반영하여 보여준다.
 
 :small_blue_diamond:  detail
+ ![request_regist_shop](https://user-images.githubusercontent.com/29995264/120181519-23439e80-c248-11eb-9882-d492dc437a69.gif)
  1. 승인되지 않은 가게는 보이지 않는다.
  2. 판매자의 가게가 존재하지 않는 경우에만 가게등록 버튼이 보인다.
 
