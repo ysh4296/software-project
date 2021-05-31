@@ -35,6 +35,8 @@ class LoginView(mixins.LoggedOutOnlyView, FormView):
         user = authenticate(self.request, username=username, password=password)
         if user is not None:
             login(self.request, user)
+            if user.user_type == models.User.USER_SELLER:
+                self.success_url = reverse_lazy("restaurant:list")
         return super().form_valid(form)
 
 

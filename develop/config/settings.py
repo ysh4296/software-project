@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.contrib import messages
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "users",
     "core",
+    "restaurant",
 ]
 
 # PROJECT_APPS = ["users.apps.UsersConfig"]
@@ -130,3 +133,11 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
