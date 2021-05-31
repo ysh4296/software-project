@@ -22,10 +22,11 @@
 
 #### :small_blue_diamond:  detail  
 ![menu_add1](https://user-images.githubusercontent.com/29995264/120183256-6f8fde00-c24a-11eb-8efa-e1c8fa660620.gif)
-![menu_add2](https://user-images.githubusercontent.com/29995264/120183353-87fff880-c24a-11eb-9ca0-21570ff9ba3d.gif)
+- 메뉴의 상세정보를 기입하고 등록하면 메뉴가 추가된다.  
 
- 1. 메뉴를 추가할 때, 중복된 메뉴가 있을 시, 추가 불가능한 내용 구현 
- 2. 판매자로 로그인 되어있는 상태이고, 자신의 가게가 있을 경우에 메뉴 등록이 가능하다.  
+![menu_add2](https://user-images.githubusercontent.com/29995264/120183353-87fff880-c24a-11eb-9ca0-21570ff9ba3d.gif)
+- 메뉴를 추가할 때, 중복된 메뉴가 있을 시, 추가가 불가능하다  
+- 판매자로 로그인 되어있는 상태이고, 자신의 가게가 있을 경우에 메뉴 등록이 가능하다.  
 
 
 ### 2. Review Add
