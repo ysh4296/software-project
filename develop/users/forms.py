@@ -51,3 +51,20 @@ class LoginForm(forms.Form):
                 self.add_error("password", forms.ValidationError("Password is wrong"))
         except models.User.DoesNotExist:
             self.add_error("username", forms.ValidationError("User does not exist"))
+
+
+class EditForm(forms.ModelForm):
+    class Meta:
+        model = models.User
+        fields = [
+            "password",
+            "first_name",
+            "last_name",
+            "address",
+        ]
+        widgets = {"password": forms.PasswordInput()}
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs["class"] = "form-control"
