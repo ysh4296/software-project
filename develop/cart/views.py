@@ -47,7 +47,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, products=None):
 
     stripe.api_key = settings.STRIPE_SECRET_KEY
     stripe_total = int(total * 100)
-    description = 'Perfect Cushion Shop - New Order'
+    description = 'Pizza store- new order'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
 
     if request.method == 'POST':
