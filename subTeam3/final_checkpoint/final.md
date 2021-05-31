@@ -51,6 +51,8 @@
  ![request_regist_shop](https://user-images.githubusercontent.com/29995264/120181519-23439e80-c248-11eb-9882-d492dc437a69.gif)
  1. 승인되지 않은 가게는 보이지 않는다.
  2. 판매자의 가게가 존재하지 않는 경우에만 가게등록 버튼이 보인다.
+ ![accept_shop](https://user-images.githubusercontent.com/29995264/120181794-859c9f00-c248-11eb-949a-a136f0080900.gif)
+
 
 
 ## 3. 결론
