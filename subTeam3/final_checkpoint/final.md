@@ -21,6 +21,9 @@
  - 시스템은 추가된 메뉴를 반영하여 보여준다.  
 
 #### :small_blue_diamond:  detail  
+![menu_add1](https://user-images.githubusercontent.com/29995264/120183256-6f8fde00-c24a-11eb-8efa-e1c8fa660620.gif)
+![menu_add2](https://user-images.githubusercontent.com/29995264/120183353-87fff880-c24a-11eb-9ca0-21570ff9ba3d.gif)
+
  1. 메뉴를 추가할 때, 중복된 메뉴가 있을 시, 추가 불가능한 내용 구현 
  2. 판매자로 로그인 되어있는 상태이고, 자신의 가게가 있을 경우에 메뉴 등록이 가능하다.  
 
