@@ -3,10 +3,12 @@ from django.views.generic import FormView, UpdateView
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+from . import mixins
+
 from . import forms, models
 
 # Create your views here.
-class SignUpView(FormView):
+class SignUpView(mixins.LoggedOutOnlyView, FormView):
     template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("users:login")
@@ -21,7 +23,7 @@ def log_out(request):
     return redirect(reverse("users:login"))
 
 
-class LoginView(FormView):
+class LoginView(mixins.LoggedOutOnlyView, FormView):
 
     template_name = "users/login.html"
     form_class = forms.LoginForm
@@ -40,7 +42,7 @@ def home(request):
     return render(request, "users/home.html")
 
 
-class EditView(SuccessMessageMixin, UpdateView):
+class EditView(mixins.LoggedInOnlyView, SuccessMessageMixin, UpdateView):
     model = models.User
     template_name = "users/edit.html"
     fields = (
