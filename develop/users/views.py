@@ -27,7 +27,7 @@ class LoginView(mixins.LoggedOutOnlyView, FormView):
 
     template_name = "users/login.html"
     form_class = forms.LoginForm
-    success_url = reverse_lazy("users:home")
+    success_url = reverse_lazy("core:home")
 
     def form_valid(self, form):
         username = form.cleaned_data.get("username")
@@ -55,7 +55,7 @@ class EditView(mixins.LoggedInOnlyView, SuccessMessageMixin, UpdateView):
     )
     initial = {"password": "New password"}
     success_message = "Profile Updated"
-    success_url = reverse_lazy("users:home")
+    success_url = reverse_lazy("core:home")
 
     def get_object(self, queryset=None):
         return self.request.user

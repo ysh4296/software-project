@@ -10,7 +10,7 @@ class LoggedOutOnlyView(UserPassesTestMixin):
 
     def handle_no_permission(self):
         messages.warning(self.request, "이미 로그인 된 상태입니다")
-        return redirect("users:home")
+        return redirect("core:home")
 
 
 class LoggedInOnlyView(LoginRequiredMixin):

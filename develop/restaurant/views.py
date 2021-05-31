@@ -109,7 +109,7 @@ def review_delete(request, restaurant_id, review_id):
     user = request.user
     item = get_object_or_404(Review, pk=review_id)
     item.delete()
-    return redirect('restaurant-detail', id=restaurant_id)
+    return redirect('restaurant:restaurant-detail', id=restaurant_id)
 
 
 class detail_model(ListView):
@@ -125,10 +125,12 @@ class detail_model(ListView):
     def get(self, request, id):
         user = request.user
         if 'id' is not None:
+            item = get_object_or_404(Restaurant, pk=id)
             rest = Restaurant.objects.filter(user=request.user).exists()
             if rest == True:
                 tmp = Restaurant.objects.filter(user=request.user).all()
                 rest_id = tmp[0].pk
+                menus = Menu.objects.filter(restaurant=item).all()
             else:
                 rest_id = -1
             item = get_object_or_404(Restaurant, pk=id)
@@ -139,7 +141,8 @@ class detail_model(ListView):
                 'reviews': reviews,
                 'val': val,
                 "rest": rest,
-                "rest_id": rest_id
+                "rest_id": rest_id,
+            'menus': menus
             }
             return render(request, 'restaurant/detail.html', context)
         return HttpResponseRedirect('/restaurant/list/')
@@ -170,7 +173,7 @@ class Review_model(ListView):
         print(request.POST)
         if form.is_valid():
             new_item = form.save()
-        return redirect('restaurant-detail', id=restaurant_id)
+        return redirect('restaurant:restaurant-detail', id=restaurant_id)
 
 class Menu_add(ListView):
     def checklog(self, item, menu_name):
@@ -234,5 +237,5 @@ class Menu_add(ListView):
                 "rest_id": rest_id
             }
             return render(request, 'restaurant/menu_add.html', context)
-        return redirect('restaurant-detail', id=restaurant_id)
+        return redirect('restaurant:restaurant-detail', id=restaurant_id)
 

@@ -7,13 +7,18 @@
         <h1 class="text-center">Pizza ordering System</h1>
         {% if user.is_authenticated %}
         <div class="text-center mx-auto my-4">
+            <a href="{% url 'restaurant:list' %}" class="w-25 btn-primary btn-lg">피자 주문하러 가기</a>
+        </div>
+        <div class="text-center mx-auto my-4">
             <a href="{% url 'users:edit' %}" class="w-25 btn-primary btn-lg">회원정보수정 </a>
         </div>
         
         <div class="text-center mx-auto">
             <a href="{% url 'users:logout' %}" class="w-25 btn-primary btn-lg">로그아웃</a>
         </div>
+
     {% else %}
+    
     
     <div class="text-center mx-auto my-4">
         <a href="{% url 'users:login' %}" class="w-25 btn-primary btn-lg">로그인</a>
