@@ -1,5 +1,5 @@
 # Final _ check point
-## [subTeam1 구현한 코드](https://github.com/ysh4296/software-project/tree/subteam1-develop)  
+## [subTeam1 구현한 코드](https://github.com/ysh4296/software-project/tree/subteam1-develop/develop)  
 
 
 ## 1. 목차
