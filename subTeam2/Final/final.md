@@ -21,3 +21,6 @@
 - 로그아웃이 되면 로그인 화면으로 넘어간다.
 
 ![logout](https://user-images.githubusercontent.com/29909322/120178631-abc04000-c244-11eb-814c-0fa3b74eede8.gif)
+
+### 홈에서 피자 가게 리스트 페이지로 이동할 수 있다.
+![move_to_restaurant list](https://user-images.githubusercontent.com/29909282/120181774-7f0e2780-c248-11eb-80b9-d4b93e2374bd.gif)
